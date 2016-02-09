@@ -9,5 +9,21 @@
 </head>
 <body>
     <h1>{{title}}</h1>
+    <div ng-show="loading">Loading data...</div>
+
+    <table ng-hide="loading">
+        <thead>
+            <tr>
+                <td>First</td>
+                <td>Last</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in people">
+                <td>{{person.fname}}</td>
+                <td>{{person.lname}}</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
